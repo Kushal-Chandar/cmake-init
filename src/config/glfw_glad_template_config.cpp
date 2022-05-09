@@ -1,0 +1,1 @@
+#include "glfw_glad_template_config.hpp"
