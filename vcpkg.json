@@ -1,0 +1,5 @@
+{
+  "name": "cmake-init",
+  "version-string": "0.0.1",
+  "dependencies": ["fmt"]
+}
