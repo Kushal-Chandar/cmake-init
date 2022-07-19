@@ -1,5 +1,7 @@
 # build directory
 build/
+.vscode/
+external/
 
 # Prerequisites
 *.d
