@@ -22,7 +22,7 @@ if(ENABLE_DOXYGEN)
   file(MAKE_DIRECTORY "${PROJECT_SOURCE_DIR}/docs")
   set(DOXYGEN_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/docs")
 
-  set(DOXYGEN_EXCLUDE_PATTERNS "${CMAKE_CURRENT_SOURCE_DIR}/external/*"
+  set(DOXYGEN_EXCLUDE_PATTERNS "${CMAKE_CURRENT_SOURCE_DIR}/tools/*"
                                "${CMAKE_CURRENT_SOURCE_DIR}/build/*")
   # ----------------------------------------------------------------------------
   #   https://github.com/jothepro/doxygen-awesome-css v2.0.3

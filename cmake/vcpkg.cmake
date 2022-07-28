@@ -2,7 +2,7 @@ include_guard()
 # ----------------------------------------------------------------------------
 #   Set vcpkg location
 # ----------------------------------------------------------------------------
-set(VCPKG_PARENT_DIR ${CMAKE_SOURCE_DIR}/external)
+set(VCPKG_PARENT_DIR ${CMAKE_SOURCE_DIR}/tools)
 set(VCPKG_DIR ${VCPKG_PARENT_DIR}/vcpkg)
 
 # ----------------------------------------------------------------------------

@@ -4,6 +4,8 @@
 #include <iostream>
 #include <vector>
 
+#include "sum/sum.h"
+
 /**
  * @brief a test class to test doxygen
  *
@@ -55,6 +57,10 @@ auto main(/* int argc, char const* argv[] */) -> int {
   for (auto&& isn : test) {
     fmt::print("{}", isn);
   }
+
+  fmt::print("{}", func(1, 2));
+  fmt::print("{}", add(1, 2));
+  fmt::print("{}", sum::sum(1, 2));
 
   fmt::print("NOPe");
 

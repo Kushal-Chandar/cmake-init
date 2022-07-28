@@ -1,4 +1,4 @@
-*:./external/:*
+*:./tools/:*
 *:./build/:*
 missingIncludeSystem
 unmatchedSuppression

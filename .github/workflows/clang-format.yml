@@ -9,7 +9,7 @@ jobs:
       - uses: DoozyX/clang-format-lint-action@v0.13
         with:
           source: "."
-          exclude: "./third_party ./external"
+          exclude: "./third_party ./tools"
           extensions: "h,cc"
           clangFormatVersion: 14
           inplace: True
