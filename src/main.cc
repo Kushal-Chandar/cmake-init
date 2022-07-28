@@ -20,14 +20,10 @@ class test {
 /**
  * @brief a test function to test doxygen
  *
- * @param oka
- * @param notok
+ * @param num1
+ * @param num2
  * @return float
  */
-auto func(int oka, int notok) -> float {
-  return static_cast<float>(oka + notok);
-}
-
 auto add(int num1, int num2) -> float {
   return static_cast<float>(num1 + num2);
 }
@@ -58,7 +54,6 @@ auto main(/* int argc, char const* argv[] */) -> int {
     fmt::print("{}", isn);
   }
 
-  fmt::print("{}", func(1, 2));
   fmt::print("{}", add(1, 2));
   fmt::print("{}", sum::sum(1, 2));
 
