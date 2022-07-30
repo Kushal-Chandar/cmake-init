@@ -40,9 +40,8 @@ endif()
 # ----------------------------------------------------------------------------
 #   Project configuration
 # ----------------------------------------------------------------------------
-
 set(CMAKE_CXX_COMPILER clang++)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -65,7 +64,7 @@ if(ENABLE_IPO)
 endif()
 
 # ----------------------------------------------------------------------------
-#   Use -std=c++17 instead of -std=gnu++17 (Disable gnu specific features)
+#   Use -std=c++20 instead of -std=gnu++20 (Disable gnu specific features)
 # ----------------------------------------------------------------------------
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -81,12 +80,12 @@ add_custom_target(
   WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}")
 
 # ----------------------------------------------------------------------------
-#   Call other scripts (calling from source directory cmake file, 'cmake' is required)
+#   Call other scripts from current directory
 # ----------------------------------------------------------------------------
-include(cmake/ccache.cmake)
-include(cmake/compiler_warnings.cmake)
-include(cmake/sanitizers.cmake)
-include(cmake/static_analysis.cmake)
-include(cmake/vcpkg.cmake)
-include(cmake/doxygen.cmake)
-include(cmake/testing.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/ccache.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/compiler_warnings.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/sanitizers.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/static_analysis.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/vcpkg.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/doxygen.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/testing.cmake)
