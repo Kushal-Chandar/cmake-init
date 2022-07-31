@@ -1,6 +1,8 @@
 # cmake-init
 
-a cmake project with vcpkg, ci, code coverage, clang tidy, cpp check, graphviz, iwyu,etc
+a cmake project with ci, code coverage, clang tidy, cpp check, graphviz, iwyu,etc
+
+dependency management -> msys2 and vcpkg
 
 ## Todo
 
