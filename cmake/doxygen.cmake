@@ -29,8 +29,8 @@ if(ENABLE_DOXYGEN)
   # ----------------------------------------------------------------------------
   FetchContent_Declare(
     _doxygen_theme
-    URL https://github.com/jothepro/doxygen-awesome-css/archive/refs/tags/v2.0.3.zip
-  )
+    GIT_REPOSITORY https://github.com/jothepro/doxygen-awesome-css.git
+    GIT_TAG v2.0.3)
   FetchContent_MakeAvailable(_doxygen_theme)
   set(DOXYGEN_HTML_EXTRA_STYLESHEET
       "${_doxygen_theme_SOURCE_DIR}/doxygen-awesome.css"
