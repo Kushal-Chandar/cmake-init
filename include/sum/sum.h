@@ -1,3 +1,3 @@
 namespace sum {
-int sum(int, int);
+auto sum(int num1, int num2) -> int;
 }  // namespace sum
