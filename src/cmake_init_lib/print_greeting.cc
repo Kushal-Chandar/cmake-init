@@ -4,7 +4,7 @@
 #include <fmt/core.h>
 
 namespace cmake_init::cmake_init_lib {
-auto PrintGreeting::Print() -> void {
+auto PrintGreeting::Print() -> bool {
   fmt::print(fg(fmt::color::green),
              "Hello\n"
              "This sample program is to demonstrate directory and namespace "
@@ -13,5 +13,6 @@ auto PrintGreeting::Print() -> void {
              "Notice 💀💀💀💀💀\n"
              "The root level name space is directly in the include directory.\n"
              "Nested namespaces are extended as per requirement.\n");
+  return true;
 }
 }  // namespace cmake_init::cmake_init_lib
