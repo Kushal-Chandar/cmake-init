@@ -1,10 +1,10 @@
 # cmake-init
 
-a cmake project with ci, code coverage, clang tidy, cpp check, graphviz, iwyu,etc
+a cmake project with ci, code coverage, clang tidy, cpp check, graphviz, iwyu, gtest, etc.
 
 dependency management -> msys2 and vcpkg
 
-## Todo
+## Todo in CI
 
 Static analysis -> markdownlint, clang-tidy, cppcheck, iwyu
 Formatting ->  clang-format, cmake-format (todo add ci)

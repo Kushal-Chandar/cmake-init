@@ -3,6 +3,8 @@
 
 namespace cmake_init {
 
+auto sum_of_first_n_naturals(int num) -> int;
+
 class CmakeInit {
  public:
   auto Greet() -> void;
