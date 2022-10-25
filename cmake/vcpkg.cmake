@@ -15,12 +15,14 @@ function(install_or_update_vcpkg)
     set(CMAKE_EXECUTABLE_SUFFIX ".exe")
   endif()
 
-  if(EXISTS ${VCPKG_DIR} AND EXISTS
-                             ${VCPKG_DIR}/vcpkg${CMAKE_EXECUTABLE_SUFFIX})
+  if(EXISTS ${VCPKG_DIR} AND EXISTS ${VCPKG_DIR}/.git/)
     message("Updating vcpkg\n")
     execute_process(COMMAND "${GIT_EXECUTABLE}" "pull"
                     WORKING_DIRECTORY "${VCPKG_DIR}")
   else()
+    if(EXISTS ${VCPKG_DIR})
+      file(REMOVE_RECURSE ${VCPKG_DIR})
+    endif()
     execute_process(
       COMMAND "${GIT_EXECUTABLE}" "clone"
               "https://github.com/microsoft/vcpkg.git"
@@ -36,12 +38,13 @@ function(install_or_update_vcpkg)
       COMMAND "./bootstrap-vcpkg.sh" "-disableMetrics"
       WORKING_DIRECTORY "${VCPKG_DIR}" COMMAND_ERROR_IS_FATAL LAST)
   endif()
+  message("You can turn this OFF in options.cmake\n")
 endfunction()
 
 # ----------------------------------------------------------------------------
 #   Update or install vcpkg based on option
 # ----------------------------------------------------------------------------
-if(UPDATE_VCPKG)
+if(INSTALL_OR_UPDATE_VCPKG)
   install_or_update_vcpkg()
 endif()
 
@@ -51,20 +54,49 @@ endif()
 if(BUILD_TESTING)
   list(APPEND VCPKG_MANIFEST_FEATURES "tests")
 endif()
+# Not required if there is no tests feature in your vcpkg.json
 
+# ----------------------------------------------------------------------------
+#   VCPKG configuration
+# ----------------------------------------------------------------------------
+set(LINKING "")
 if(BUILD_SHARED_LIBS)
-  set(MINGW_LINKING "dynamic")
+  set(LINKING "-dynamic")
 else()
-  set(MINGW_LINKING "static")
+  set(LINKING "-static")
 endif()
 
-set(VCPKG_CMAKE_SYSTEM_NAME
-    "MinGW"
-    CACHE STRING "")
-set(VCPKG_TARGET_IS_MINGW
-    TRUE
-    CACHE STRING "")
+set(PLATFORM "")
 
-set(VCPKG_TARGET_TRIPLET "x64-mingw-${MINGW_LINKING}")
-set(VCPKG_HOST_TRIPLET "x64-mingw-${MINGW_LINKING}")
+if(LINUX)
+  set(VCPKG_CMAKE_SYSTEM_NAME
+      "UNIX"
+      CACHE STRING "")
+  set(VCPKG_TARGET_IS_MINGW
+      FALSE
+      CACHE STRING "")
+  message(STATUS "Running on Linux")
+  set(PLATFORM "-linux")
+  if(NOT BUILD_SHARED_LIBS)
+    set(LINKING "")
+  endif(NOT BUILD_SHARED_LIBS)
+endif(LINUX)
+
+if(WIN32) # only supporting mingw
+  set(VCPKG_CMAKE_SYSTEM_NAME
+      "MinGW"
+      CACHE STRING "")
+  set(VCPKG_TARGET_IS_MINGW
+      TRUE
+      CACHE STRING "")
+  message(STATUS "Running on windows")
+  set(PLATFORM "-mingw")
+endif(WIN32)
+
+set(VCPKG_TARGET_TRIPLET "x64${PLATFORM}${LINKING}")
+set(VCPKG_HOST_TRIPLET "x64${PLATFORM}${LINKING}")
+message(
+  NOTICE
+  "\nIf you are getting an error here, please turn ON INSTALL_OR_UPDATE_VCPKG option or you can replace the below path with your vcpkg toolchain's absolute path.\n"
+)
 include(${VCPKG_DIR}/scripts/buildsystems/vcpkg.cmake)
