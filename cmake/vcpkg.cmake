@@ -54,7 +54,7 @@ endif()
 if(BUILD_TESTING)
   list(APPEND VCPKG_MANIFEST_FEATURES "tests")
 endif()
-# Not required if there no tests feature in your vcpkg.json
+# Not required if there is no tests feature in your vcpkg.json
 
 # ----------------------------------------------------------------------------
 #   VCPKG configuration
