@@ -17,6 +17,10 @@ mkdir build && cd build
 cmake -S .. -B .
 ```
 
+## NOTE
+
+This template uses MIT License. Please feel free to change this to your intended license before publishing the software.
+
 ## Todo in CI
 
 Static analysis -> markdownlint, clang-tidy, cppcheck, iwyu
