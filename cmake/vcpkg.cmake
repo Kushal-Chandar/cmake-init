@@ -44,7 +44,7 @@ endfunction()
 install_or_update_vcpkg()
 
 # ----------------------------------------------------------------------------
-#   Get packages required for testing
+#   Get required packages for testing
 # ----------------------------------------------------------------------------
 if(BUILD_TESTING)
   list(APPEND VCPKG_MANIFEST_FEATURES "tests")

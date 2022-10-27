@@ -21,6 +21,10 @@ set(ENABLE_CCACHE ON)
 # set(SANITIZE_UNDEFINED ON)
 
 if(DOCKER_BUILD)
-  set(ENABLE_DOXYGEN OFF) # turn this off for docker
-  set(INSTALL_OR_UPDATE_VCPKG OFF) # turn this off for docker
+  set(ENABLE_DOXYGEN OFF)
+  # turn this off for docker we are not building docks for prod
+  set(INSTALL_OR_UPDATE_VCPKG OFF)
+  # turn this off for docker unless you are testing and your testing framework not available in docker image
+  set(BUILD_TESTING OFF)
+  # turn this off for docker unless your want your tests to run in docker before deployment
 endif()
