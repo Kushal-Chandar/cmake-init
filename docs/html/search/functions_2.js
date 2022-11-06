@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sum_0',['sum',['../namespacesum.html#ab433fef582a473d78bd8d7921d7fd060',1,'sum']]]
+  ['print_0',['Print',['../classcmake__init_1_1cmake__init__lib_1_1_print_greeting.html#a841c0c6e9649d380b91cdeaf7069f4d9',1,'cmake_init::cmake_init_lib::PrintGreeting']]]
 ];

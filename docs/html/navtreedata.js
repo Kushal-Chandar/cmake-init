@@ -26,8 +26,10 @@ var NAVTREE =
 [
   [ "cmake-init", "index.html", [
     [ "cmake-init", "md__r_e_a_d_m_e.html", [
-      [ "Todo", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
-      [ "Goals", "md__r_e_a_d_m_e.html#autotoc_md2", null ]
+      [ "Usage", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "NOTE", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
+      [ "Todo in CI", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
+      [ "Goals", "md__r_e_a_d_m_e.html#autotoc_md4", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],

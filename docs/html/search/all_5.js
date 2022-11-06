@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['sum_0',['sum',['../namespacesum.html',1,'sum'],['../namespacesum.html#ab433fef582a473d78bd8d7921d7fd060',1,'sum::sum()']]],
-  ['sum_2ecc_1',['sum.cc',['../sum_8cc.html',1,'']]],
-  ['sum_2eh_2',['sum.h',['../sum_8h.html',1,'']]]
+  ['sum_5fof_5ffirst_5fn_5fnaturals_0',['sum_of_first_n_naturals',['../namespacecmake__init.html#ac39930aa640245afd54cd8637ef99470',1,'cmake_init']]]
 ];

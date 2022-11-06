@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['test_0',['test',['../classtest.html#ac0e420aa68aa80a608437a2ba0edaef1',1,'test']]],
-  ['test_1',['TEST',['../hello__test_8cc.html#a4d0bc75d9219d03c0ba2fa265b5014aa',1,'hello_test.cc']]]
+  ['sum_5fof_5ffirst_5fn_5fnaturals_0',['sum_of_first_n_naturals',['../namespacecmake__init.html#ac39930aa640245afd54cd8637ef99470',1,'cmake_init']]]
 ];
