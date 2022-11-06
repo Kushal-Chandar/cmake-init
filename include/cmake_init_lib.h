@@ -1,5 +1,5 @@
-#if !defined(CMAKE_INIT)
-#define CMAKE_INIT
+#if !defined(CMAKE_INIT_INCLUDE_CMAKE_INIT_LIB_H_)
+#define CMAKE_INIT_INCLUDE_CMAKE_INIT_LIB_H_
 
 namespace cmake_init {
 
@@ -12,4 +12,4 @@ class CmakeInit {
 
 }  // namespace cmake_init
 
-#endif  // CMAKE_INIT
+#endif  // CMAKE_INIT_INCLUDE_CMAKE_INIT_LIB_H_

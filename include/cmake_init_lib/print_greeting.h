@@ -1,5 +1,5 @@
-#if !defined(PRINT_GREATING)
-#define PRINT_GREATING
+#if !defined(CMAKE_INIT_INCLUDE_CMAKE_INIT_LIB_PRINT_GREETING_H_)
+#define CMAKE_INIT_INCLUDE_CMAKE_INIT_LIB_PRINT_GREETING_H_
 
 namespace cmake_init::cmake_init_lib {
 class PrintGreeting {
@@ -8,4 +8,4 @@ class PrintGreeting {
 };
 }  // namespace cmake_init::cmake_init_lib
 
-#endif  // PRINT_GREATING
+#endif  // CMAKE_INIT_INCLUDE_CMAKE_INIT_LIB_PRINT_GREETING_H_
