@@ -1,9 +1,4 @@
 ---
-#################################
-#################################
-## Super Linter GitHub Actions ##
-#################################
-#################################
 name: Lint Code Base
 
 #############################
@@ -21,18 +16,9 @@ on:
 ###############
 jobs:
   build:
-    # Name the Job
     name: Lint Code Base
-    # Set the agent to run on
     runs-on: ubuntu-latest
-
-    ##################
-    # Load all steps #
-    ##################
     steps:
-      ##########################
-      # Checkout the code base #
-      ##########################
       - name: Checkout Code
         uses: actions/checkout@v3
         with:
@@ -40,9 +26,6 @@ jobs:
           # list of changed files within `super-linter`
           fetch-depth: 0
 
-      ################################
-      # Run Linter against code base #
-      ################################
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
