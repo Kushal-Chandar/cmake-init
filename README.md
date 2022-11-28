@@ -1,5 +1,7 @@
 # cmake-init
 
+[![GitHub Super-Linter](https://github.com/Kushal-Chandar/cmake-init/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
 a cmake project with ci, code coverage, clang tidy, cpp check, graphviz, iwyu, gtest, etc.
 
 dependency management -> msys2 and vcpkg
