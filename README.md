@@ -4,6 +4,11 @@ a cmake project with ci, code coverage, clang tidy, cpp check, graphviz, iwyu, g
 
 dependency management -> msys2 and vcpkg
 
+## Features
+
+- Automatic versioning with git annotated tags,
+  _please follow [semantic versioning](https://semver.org/) for accurate and predictable results._
+
 ## Usage
 
 Make sure you have base development packages for your environment.
