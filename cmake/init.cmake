@@ -5,11 +5,13 @@ option(INSTALL_OR_UPDATE_VCPKG
 option(ENABLE_VCPKG "Enable package management with vcpkg" OFF)
 option(MANIFEST_FEATURE_TEST "Get packages required for testing" OFF)
 option(WARNINGS_AS_ERRORS "Treat compiler warnings as errors" OFF)
-option(ENABLE_AUTOMATIC_VERSIONING
-       "Generate project version from git annotated tags" OFF)
 option(CODE_COVERAGE "Enable coverage reporting" OFF)
 option(BUILD_TESTING "Build the testing tree" OFF)
 option(DOCKER_BUILD "Build for docker image" OFF)
+option(ENABLE_AUTOMATIC_VERSIONING
+       "Generate project version from git annotated tags" OFF)
+option(ENABLE_CONFIGURATION_HEADER
+       "Generate a header file with project details" OFF)
 option(ENABLE_DOXYGEN "Build doxygen docs" OFF)
 option(ENABLE_CCACHE "Enable ccache for faster compilation" OFF)
 option(ENABLE_IPO "Enable IPO/LTO, for improved runtime performance" OFF)
@@ -20,6 +22,18 @@ option(SANITIZE_UNDEFINED "Enable sanitizer for undefined behaviour" OFF)
 #   Get all options set from options.cmake
 # ----------------------------------------------------------------------------
 include(${CMAKE_CURRENT_SOURCE_DIR}/options.cmake)
+
+# ----------------------------------------------------------------------------
+#   Replace "-" with "_" in project name and get upper and lower case name
+# ----------------------------------------------------------------------------
+string(
+  REGEX
+  REPLACE "-"
+          "_"
+          PROJECT_NAME
+          ${PROJECT_NAME})
+string(TOLOWER ${PROJECT_NAME} PROJECT_NAME_LOWER)
+string(TOUPPER ${PROJECT_NAME} PROJECT_NAME_UPPER)
 
 # ----------------------------------------------------------------------------
 #   Detecting linux
@@ -86,6 +100,9 @@ include(${CMAKE_CURRENT_LIST_DIR}/compiler_warnings.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/sanitizers.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/static_analysis.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/git_tag_versioning.cmake)
+if(ENABLE_CONFIGURATION_HEADER)
+  include(${CMAKE_CURRENT_LIST_DIR}/configuration_header.cmake)
+endif()
 if(ENABLE_VCPKG)
   include(${CMAKE_CURRENT_LIST_DIR}/vcpkg.cmake)
 endif()
