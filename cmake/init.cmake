@@ -48,20 +48,20 @@ endif()
 add_library(project_compile_options INTERFACE)
 
 # ----------------------------------------------------------------------------
-#   Get absolute path with symlinks resolved
-# ----------------------------------------------------------------------------
-file(REAL_PATH "${CMAKE_CURRENT_BINARY_DIR}" BINARY_DIR)
-file(REAL_PATH "${CMAKE_CURRENT_SOURCE_DIR}" SOURCE_DIR)
-
-# ----------------------------------------------------------------------------
 #   Prevent building in source directory
 # ----------------------------------------------------------------------------
+# get absolute path with symlinks resolved
+file(REAL_PATH "${CMAKE_CURRENT_BINARY_DIR}" BINARY_DIR)
+file(REAL_PATH "${CMAKE_CURRENT_SOURCE_DIR}" SOURCE_DIR)
 if("${SOURCE_DIR}" STREQUAL "${BINARY_DIR}")
   message("# ---------------------------------------------------------")
   message("#   Warning: build directory and source directory are same.")
   message("# ---------------------------------------------------------")
   message(FATAL_ERROR "In source build.")
 endif()
+# unset previous variables
+unset(BINARY_DIR)
+unset(SOURCE_DIR)
 
 # ----------------------------------------------------------------------------
 #   Project configuration
