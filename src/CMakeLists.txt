@@ -34,6 +34,5 @@ target_link_libraries(cmake-init_app PRIVATE configuration_header
 )# Enable configuration header option should be set to on
 target_link_libraries(cmake-init_app PRIVATE project_compile_options)
 target_link_libraries(cmake-init_app PRIVATE cmake-init_lib)
-target_include_directories(cmake-init_app PRIVATE ${CMAKE_INIT_SOURCE_DIR})
 target_include_directories(cmake-init_app
                            PRIVATE ${CMAKE_INIT_PRIVATE_HEADER_DIR})
