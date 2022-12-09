@@ -66,9 +66,9 @@ cmake-init
  │   │   └── cmake_init_lib
  │   │       └── print_greeting.h
  │   ├── impl
+ │   │   ├── cmake_init_lib.cc
  │   │   ├── cmake_init_lib
  │   │   │   └── print_greeting.h
- │   │   ├── cmake_init_lib.cc
  │   │   └── main.cpp
 ```
 
