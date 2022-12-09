@@ -1,11 +1,14 @@
 {
   "name": "cmake-init",
-  "version-string": "0.0.1",
-  "dependencies": ["fmt"],
+  "dependencies": [
+    "fmt"
+  ],
   "features": {
     "tests": {
       "description": "Build the tests of the package's tests",
-      "dependencies": ["gtest"]
+      "dependencies": [
+        "gtest"
+      ]
     }
   }
 }

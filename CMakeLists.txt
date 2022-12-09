@@ -4,30 +4,18 @@ project(cmake-init LANGUAGES CXX)
 
 include(cmake/init.cmake)
 
-###########################################
-### Required packages
-###########################################
-find_package(fmt CONFIG REQUIRED)
+#####################################################
+### Target (building app? a library? both?)
+#####################################################
+add_library(cmake-init_lib)
+set_target_properties(cmake-init_lib PROPERTIES OUTPUT_NAME cmake-init
+)# libcmake-init.a
 
-###########################################
-### cmake-init library
-###########################################
-add_library(cmake_init_lib STATIC)
-target_sources(
-  cmake_init_lib
-  PRIVATE include/cmake_init_lib.h
-          src/cmake_init_lib.cc
-          include/cmake_init_lib/print_greeting.h
-          src/cmake_init_lib/print_greeting.cc)
-target_link_libraries(cmake_init_lib PRIVATE project_compile_options)
-target_link_libraries(cmake_init_lib PRIVATE fmt::fmt)
-target_include_directories(cmake_init_lib PUBLIC include)
-# a target linking to this library doesnot need to have its includes in its target include libraries
+add_executable(cmake-init_app)
+set_target_properties(cmake-init_app PROPERTIES OUTPUT_NAME cmake-init
+)# cmake-init.exe
 
-###########################################
-### cmake-init
-###########################################
-add_executable(cmake-init)
-target_sources(cmake-init PRIVATE src/main.cc)
-target_link_libraries(cmake-init PRIVATE project_compile_options)
-target_link_libraries(cmake-init PRIVATE cmake_init_lib)
+#####################################################
+### Source files to build
+#####################################################
+add_subdirectory(src)

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>cmake-init: include/cmake_init_lib.h Source File</title>
+<title>cmake-init: include/cmake-init/cmake_init_lib.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,31 +94,37 @@ $(document).ready(function(){initNavTree('cmake__init__lib_8h_source.html',''); 
   <div class="headertitle"><div class="title">cmake_init_lib.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="cmake__init__lib_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if !defined(CMAKE_INIT_INCLUDE_CMAKE_INIT_LIB_H_)</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CMAKE_INIT_INCLUDE_CMAKE_INIT_LIB_H_</span></div>
+<a href="cmake__init__lib_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if !defined(CMAKE_INIT_INCLUDE_CMAKE_INIT_CMAKE_INIT_LIB_H_)</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CMAKE_INIT_INCLUDE_CMAKE_INIT_CMAKE_INIT_LIB_H_</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecmake__init.html">cmake_init</a> {</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">auto</span> <a class="code hl_function" href="namespacecmake__init.html#ac39930aa640245afd54cd8637ef99470">sum_of_first_n_naturals</a>(<span class="keywordtype">int</span> num) -&gt; int;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecmake__init.html">cmake_init</a> {</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classcmake__init_1_1_cmake_init.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="classcmake__init_1_1_cmake_init.html">CmakeInit</a> {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <span class="keyword">auto</span> <a class="code hl_function" href="classcmake__init_1_1_cmake_init.html#af99d4769e6534b9d9c144b8c986b180c">Greet</a>() -&gt; void;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>};</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}  <span class="comment">// namespace cmake_init</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">auto</span> <a class="code hl_function" href="namespacecmake__init.html#ac39930aa640245afd54cd8637ef99470">sum_of_first_n_naturals</a>(<span class="keywordtype">int</span> num) -&gt; int;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classcmake__init_1_1_cmake_init.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="classcmake__init_1_1_cmake_init.html">CmakeInit</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <span class="keyword">auto</span> <a class="code hl_function" href="classcmake__init_1_1_cmake_init.html#af99d4769e6534b9d9c144b8c986b180c">Greet</a>() -&gt; void;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="keyword">explicit</span> <a class="code hl_class" href="classcmake__init_1_1_cmake_init.html">CmakeInit</a>(std::string_view);</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#endif  </span><span class="comment">// CMAKE_INIT_INCLUDE_CMAKE_INIT_LIB_H_</span></div>
-<div class="ttc" id="aclasscmake__init_1_1_cmake_init_html"><div class="ttname"><a href="classcmake__init_1_1_cmake_init.html">cmake_init::CmakeInit</a></div><div class="ttdef"><b>Definition:</b> cmake_init_lib.h:8</div></div>
-<div class="ttc" id="aclasscmake__init_1_1_cmake_init_html_af99d4769e6534b9d9c144b8c986b180c"><div class="ttname"><a href="classcmake__init_1_1_cmake_init.html#af99d4769e6534b9d9c144b8c986b180c">cmake_init::CmakeInit::Greet</a></div><div class="ttdeci">auto Greet() -&gt; void</div><div class="ttdef"><b>Definition:</b> cmake_init_lib.cc:7</div></div>
-<div class="ttc" id="anamespacecmake__init_html"><div class="ttname"><a href="namespacecmake__init.html">cmake_init</a></div><div class="ttdef"><b>Definition:</b> cmake_init_lib.cc:5</div></div>
-<div class="ttc" id="anamespacecmake__init_html_ac39930aa640245afd54cd8637ef99470"><div class="ttname"><a href="namespacecmake__init.html#ac39930aa640245afd54cd8637ef99470">cmake_init::sum_of_first_n_naturals</a></div><div class="ttdeci">auto sum_of_first_n_naturals(int num) -&gt; int</div><div class="ttdef"><b>Definition:</b> cmake_init_lib.cc:12</div></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  std::string_view message_;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>};</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}  <span class="comment">// namespace cmake_init</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#endif  </span><span class="comment">// CMAKE_INIT_INCLUDE_CMAKE_INIT_CMAKE_INIT_LIB_H_</span></div>
+<div class="ttc" id="aclasscmake__init_1_1_cmake_init_html"><div class="ttname"><a href="classcmake__init_1_1_cmake_init.html">cmake_init::CmakeInit</a></div><div class="ttdef"><b>Definition:</b> cmake_init_lib.h:10</div></div>
+<div class="ttc" id="aclasscmake__init_1_1_cmake_init_html_af99d4769e6534b9d9c144b8c986b180c"><div class="ttname"><a href="classcmake__init_1_1_cmake_init.html#af99d4769e6534b9d9c144b8c986b180c">cmake_init::CmakeInit::Greet</a></div><div class="ttdeci">auto Greet() -&gt; void</div><div class="ttdef"><b>Definition:</b> cmake_init_lib.cc:13</div></div>
+<div class="ttc" id="anamespacecmake__init_html"><div class="ttname"><a href="namespacecmake__init.html">cmake_init</a></div><div class="ttdef"><b>Definition:</b> config.h:8</div></div>
+<div class="ttc" id="anamespacecmake__init_html_ac39930aa640245afd54cd8637ef99470"><div class="ttname"><a href="namespacecmake__init.html#ac39930aa640245afd54cd8637ef99470">cmake_init::sum_of_first_n_naturals</a></div><div class="ttdeci">auto sum_of_first_n_naturals(int num) -&gt; int</div><div class="ttdef"><b>Definition:</b> cmake_init_lib.cc:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="cmake__init__lib_8h.html">cmake_init_lib.h</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_0772bfa02f42842cd4a3b441e7b5da3d.html">cmake-init</a></li><li class="navelem"><a class="el" href="cmake__init__lib_8h.html">cmake_init_lib.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
