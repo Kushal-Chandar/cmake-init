@@ -14,8 +14,13 @@ target_sources(
           ${CMAKE_INIT_IMPL_DIR}/cmake_init_lib/print_greeting.cc)
 target_link_libraries(cmake_init_lib PRIVATE project_compile_options)
 target_link_libraries(cmake_init_lib PRIVATE fmt::fmt)
-target_include_directories(cmake_init_lib
-                           PUBLIC ${CMAKE_INIT_PUBLIC_HEADER_DIR})
+
+target_include_directories(
+  cmake_init_lib PUBLIC $<BUILD_INTERFACE:${CMAKE_INIT_PUBLIC_HEADER_DIR}>
+                        $<INSTALL_INTERFACE:${PROJECT_SOURCE_DIR}/include>)
+# you can include header files "cmake_init_lib.h"
+# your library users must use  "cmake-init/cmake_init_lib.h"
+
 target_include_directories(cmake_init_lib
                            PRIVATE ${CMAKE_INIT_PRIVATE_HEADER_DIR})
 # a target linking to this library doesnot need to have "include" in its target_include_libraries if set public
