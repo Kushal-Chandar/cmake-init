@@ -31,10 +31,11 @@ string(
   REGEX
   REPLACE "-"
           "_"
-          PROJECT_NAME
+          PROJECT_NAME_NO_HYPEN
           ${PROJECT_NAME})
-string(TOLOWER ${PROJECT_NAME} PROJECT_NAME_LOWER)
-string(TOUPPER ${PROJECT_NAME} PROJECT_NAME_UPPER)
+string(TOLOWER ${PROJECT_NAME_NO_HYPEN} PROJECT_NAME_LOWER)
+string(TOUPPER ${PROJECT_NAME_NO_HYPEN} PROJECT_NAME_UPPER)
+unset(PROJECT_NAME_NO_HYPEN)
 
 # ----------------------------------------------------------------------------
 #   Detecting linux

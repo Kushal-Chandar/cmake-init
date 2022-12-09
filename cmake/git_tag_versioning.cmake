@@ -54,7 +54,6 @@ function(get_latest_annotated_tag)
         "Failed to determine project version from GIT TAGS (annotated). Using default version ${PROJ_VER}."
     )
   endif()
-
 endfunction(get_latest_annotated_tag)
 
 # ----------------------------------------------------------------------------

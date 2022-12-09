@@ -6,7 +6,7 @@
 #include <string_view>
 
 namespace cmake_init::config {
-inline constexpr std::string_view project_name = "cmake_init";
+inline constexpr std::string_view project_name = "cmake-init";
 inline constexpr std::string_view project_version = "v0.0.2";
 inline constexpr int project_version_major{0};
 inline constexpr int project_version_minor{0};

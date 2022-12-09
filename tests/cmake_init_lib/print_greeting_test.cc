@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-#include "cmake-init/cmake_init_lib.h"
+#include "cmake_init_lib.h"
 
 // Demonstrate some basic assertions.
 TEST(PrintGreetingsTests, PrintGreeting) {

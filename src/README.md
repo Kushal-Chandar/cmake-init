@@ -51,4 +51,26 @@ are arranged in src/inc/cmake_init_lib/ and src/impl/cmake_init_lib/.
 
 **Note**: cmake_init_lib.h is a public header and any header file from src/inc/ must not be included in it.
 
-The namespace of the project is also structured in the same way.
+### Thing to note
+
+- We include both public and private headers must combine to represent the project structure of impl/.
+
+```bash
+cmake-init
+ ├── src
+ │   ├── configuration
+ │   │   ├── config.h
+ │   │   └── config.h.ini
+ │   ├── inc + include/cmake-init
+ │   │   ├── cmake_init_lib.h
+ │   │   └── cmake_init_lib
+ │   │       └── print_greeting.h
+ │   ├── impl
+ │   │   ├── cmake_init_lib
+ │   │   │   └── print_greeting.h
+ │   │   ├── cmake_init_lib.cc
+ │   │   └── main.cpp
+```
+
+- Both are public and private header files are included the same way.
+- The namespace of the project is also structured in the same way.

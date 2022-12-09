@@ -8,7 +8,7 @@ find_package(fmt CONFIG REQUIRED)
 ###########################################
 target_sources(
   cmake_init_lib
-  PRIVATE ${CMAKE_INIT_PUBLIC_HEADER_DIR}/cmake-init/cmake_init_lib.h
+  PRIVATE ${CMAKE_INIT_PUBLIC_HEADER_DIR}/cmake_init_lib.h
           ${CMAKE_INIT_IMPL_DIR}/cmake_init_lib.cc
           ${CMAKE_INIT_PRIVATE_HEADER_DIR}/cmake_init_lib/print_greeting.h
           ${CMAKE_INIT_IMPL_DIR}/cmake_init_lib/print_greeting.cc)
