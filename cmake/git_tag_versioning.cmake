@@ -1,7 +1,6 @@
 include_guard()
 
 function(get_latest_annotated_tag)
-  message(${CMAKE_SOURCE_DIR})
   execute_process(
     COMMAND ${GIT_EXECUTABLE} describe --abbrev=0 --match "v*"
     WORKING_DIRECTORY "${PROJEC_SOURCE_DIR}"

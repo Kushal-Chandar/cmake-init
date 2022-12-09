@@ -8,6 +8,18 @@ dependency management -> msys2 and vcpkg
 
 - Automatic versioning with git annotated tags,
   _please follow [semantic versioning](https://semver.org/) for accurate and predictable results._
+- Custom project variables
+
+```cmake
+# ---------------------------------------------------------------
+# if your project name is cmake-init
+# CMAKE_INIT_PUBLIC_HEADER_DIR variable -> public headers (include)
+# CMAKE_INIT_PRIVATE_HEADER_DIR variable -> private headers (src/inc)
+# CMAKE_INIT_SOURCE_DIR variable -> source files (src)
+# CMAKE_INIT_IMPL_DIR variable -> implementation (src/impl)
+# CMAKE_INIT_TEST_DIR variable -> implementation (test)
+# ---------------------------------------------------------------
+```
 
 ## Usage
 

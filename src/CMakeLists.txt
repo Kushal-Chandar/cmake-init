@@ -8,25 +8,27 @@ find_package(fmt CONFIG REQUIRED)
 ###########################################
 target_sources(
   cmake_init_lib
-  PRIVATE ${PROJECT_SOURCE_DIR}/include/cmake-init/cmake_init_lib.h
-          ${CMAKE_CURRENT_LIST_DIR}/impl/cmake_init_lib.cc
-          ${CMAKE_CURRENT_LIST_DIR}/inc/cmake_init_lib/print_greeting.h
-          ${CMAKE_CURRENT_LIST_DIR}/impl/cmake_init_lib/print_greeting.cc)
+  PRIVATE ${CMAKE_INIT_PUBLIC_HEADER_DIR}/cmake-init/cmake_init_lib.h
+          ${CMAKE_INIT_IMPL_DIR}/cmake_init_lib.cc
+          ${CMAKE_INIT_PRIVATE_HEADER_DIR}/cmake_init_lib/print_greeting.h
+          ${CMAKE_INIT_IMPL_DIR}/cmake_init_lib/print_greeting.cc)
 target_link_libraries(cmake_init_lib PRIVATE project_compile_options)
 target_link_libraries(cmake_init_lib PRIVATE fmt::fmt)
-target_include_directories(cmake_init_lib PUBLIC ${PROJECT_SOURCE_DIR}/include/)
 target_include_directories(cmake_init_lib
-                           PRIVATE ${CMAKE_CURRENT_LIST_DIR}/inc/)
+                           PUBLIC ${CMAKE_INIT_PUBLIC_HEADER_DIR})
+target_include_directories(cmake_init_lib
+                           PRIVATE ${CMAKE_INIT_PRIVATE_HEADER_DIR})
 # a target linking to this library doesnot need to have "include" in its target_include_libraries if set public
 
 ###########################################
 ### cmake-init
 ###########################################
-target_sources(cmake_init_app PRIVATE ${CMAKE_CURRENT_LIST_DIR}/impl/main.cc)
+target_sources(cmake_init_app PRIVATE ${CMAKE_INIT_IMPL_DIR}/main.cc)
 target_link_libraries(cmake_init_app PRIVATE fmt::fmt)
 target_link_libraries(cmake_init_app PRIVATE configuration_header
 )# Enable configuration header option should be set to on
 target_link_libraries(cmake_init_app PRIVATE project_compile_options)
 target_link_libraries(cmake_init_app PRIVATE cmake_init_lib)
-target_include_directories(cmake_init_app PRIVATE ${CMAKE_CURRENT_LIST_DIR})
-target_include_directories(cmake_init_app PRIVATE ${CMAKE_CURRENT_LIST_DIR}/inc)
+target_include_directories(cmake_init_app PRIVATE ${CMAKE_INIT_SOURCE_DIR})
+target_include_directories(cmake_init_app
+                           PRIVATE ${CMAKE_INIT_PRIVATE_HEADER_DIR})

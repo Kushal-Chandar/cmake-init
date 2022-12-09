@@ -4,8 +4,8 @@ include_guard()
 #   Configure file
 # ----------------------------------------------------------------------------
 configure_file(
-  ${PROJECT_SOURCE_DIR}/src/configuration/config.h.ini
-  ${PROJECT_SOURCE_DIR}/src/configuration/config.h
+  ${CMAKE_INIT_SOURCE_DIR}/configuration/config.h.ini
+  ${CMAKE_INIT_SOURCE_DIR}/configuration/config.h
   ESCAPE_QUOTES
   @ONLY)
 
@@ -15,4 +15,4 @@ configure_file(
 add_library(configuration_header STATIC)
 set_target_properties(configuration_header PROPERTIES LINKER_LANGUAGE CXX)
 target_sources(configuration_header
-               PRIVATE ${PROJECT_SOURCE_DIR}/src/configuration/config.h)
+               PRIVATE ${CMAKE_INIT_SOURCE_DIR}/configuration/config.h)
