@@ -10,7 +10,7 @@ auto sum_of_first_n_naturals(int num) -> int;
 class CmakeInit {
  public:
   auto Greet() -> void;
-  CmakeInit(std::string_view);
+  explicit CmakeInit(std::string_view);
 
  private:
   std::string_view message_;

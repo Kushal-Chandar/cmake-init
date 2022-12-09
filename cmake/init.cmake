@@ -10,6 +10,7 @@ option(BUILD_TESTING "Build the testing tree" OFF)
 option(DOCKER_BUILD "Build for docker image" OFF)
 option(ENABLE_AUTOMATIC_VERSIONING
        "Generate project version from git annotated tags" OFF)
+option(ENABLE_CUSTOM_VARIABLES "Creates custom variables with project name" OFF)
 option(ENABLE_CONFIGURATION_HEADER
        "Generate a header file with project details" OFF)
 option(ENABLE_DOXYGEN "Build doxygen docs" OFF)
@@ -30,10 +31,11 @@ string(
   REGEX
   REPLACE "-"
           "_"
-          PROJECT_NAME
+          PROJECT_NAME_NO_HYPEN
           ${PROJECT_NAME})
-string(TOLOWER ${PROJECT_NAME} PROJECT_NAME_LOWER)
-string(TOUPPER ${PROJECT_NAME} PROJECT_NAME_UPPER)
+string(TOLOWER ${PROJECT_NAME_NO_HYPEN} PROJECT_NAME_LOWER)
+string(TOUPPER ${PROJECT_NAME_NO_HYPEN} PROJECT_NAME_UPPER)
+unset(PROJECT_NAME_NO_HYPEN)
 
 # ----------------------------------------------------------------------------
 #   Detecting linux
@@ -94,12 +96,19 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # ----------------------------------------------------------------------------
 #   Call other scripts from current directory
 # ----------------------------------------------------------------------------
+if(ENABLE_CCACHE)
+  include(${CMAKE_CURRENT_LIST_DIR}/ccache.cmake)
+endif()
+if(ENABLE_CUSTOM_VARIABLES)
+  include(${CMAKE_CURRENT_LIST_DIR}/custom_variables.cmake)
+endif()
 include(${CMAKE_CURRENT_LIST_DIR}/graphviz.cmake)
-include(${CMAKE_CURRENT_LIST_DIR}/ccache.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/compiler_warnings.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/sanitizers.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/static_analysis.cmake)
-include(${CMAKE_CURRENT_LIST_DIR}/git_tag_versioning.cmake)
+if(ENABLE_AUTOMATIC_VERSIONING)
+  include(${CMAKE_CURRENT_LIST_DIR}/git_tag_versioning.cmake)
+endif()
 if(ENABLE_CONFIGURATION_HEADER)
   include(${CMAKE_CURRENT_LIST_DIR}/configuration_header.cmake)
 endif()
