@@ -1,11 +1,19 @@
 #include "cmake-init/cmake_init_lib.h"
 
+#include <fmt/core.h>
+
+#include <string_view>
+
 #include "cmake_init_lib/print_greeting.h"
 
 namespace cmake_init {
 
+CmakeInit::CmakeInit(std::string_view message) : message_(message) {}
+
 auto CmakeInit::Greet() -> void {
-  cmake_init_lib::PrintGreeting print_greeting;
+  fmt::print("{}\n", message_);
+  cmake_init_lib::PrintGreeting print_greeting(
+      std::string_view("Created print_greeting oject"));
   print_greeting.Print();
 }
 

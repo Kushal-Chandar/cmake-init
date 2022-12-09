@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('dir_6bc6ad22483805bbbda55258ad2a62ea.h
 <div class="dynheader">
 Directory dependency graph for inc:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="dir_6bc6ad22483805bbbda55258ad2a62ea_dep.svg" width="243" height="126"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><!-- SVG 0 -->
 </div>
 </div>
 <table class="memberdecls">

@@ -4,7 +4,10 @@
 #include <fmt/core.h>
 
 namespace cmake_init::cmake_init_lib {
+PrintGreeting::PrintGreeting(std::string_view message) : message_(message) {}
+
 auto PrintGreeting::Print() -> bool {
+  fmt::print("{}\n", message_);
   fmt::print(fg(fmt::color::green),
              "Hello\n"
              "This sample program is to demonstrate directory and namespace "
