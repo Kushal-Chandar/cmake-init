@@ -51,7 +51,7 @@ are arranged in src/inc/cmake_init_lib/ and src/impl/cmake_init_lib/.
 
 **Note**: cmake_init_lib.h is a public header and any header file from src/inc/ must not be included in it.
 
-### Thing to note
+### Things to note
 
 - We include both public and private headers must combine to represent the project structure of impl/.
 
