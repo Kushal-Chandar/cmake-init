@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>cmake_init: What should be put in each directory in src?</title>
+<title>cmake-init: What should be put in each directory in src?</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cmake_init
+   <div id="projectname">cmake-init
    </div>
   </td>
  </tr>
@@ -106,7 +106,9 @@ inc</h1>
 <p >.h files / private header files</p>
 <h1><a class="anchor" id="autotoc_md4"></a>
 Convention I have followed for this project</h1>
-<p >Public headers are going to be in include/${PROJECT_NAME}/ Private headers are going to be in src/inc/ All implementations are going to be in src/impl</p>
+<p >Public headers are going to be in include/${PROJECT_NAME}/.</p>
+<p >Private headers are going to be in src/inc/.</p>
+<p >All implementations are going to be in src/impl.</p>
 <p >The directory and file structure src/impl will represent the logical components of the projects, include/project and src/inc directories should try to mimic this structure.</p>
 <div class="fragment"><div class="line">cmake-init</div>
 <div class="line"> ├── include</div>
@@ -127,7 +129,29 @@ Convention I have followed for this project</h1>
 </div><!-- fragment --><p ><a class="el" href="cmake__init__lib_8h.html">include/cmake-init/cmake_init_lib.h</a> provides the interface and <a class="el" href="cmake__init__lib_8cc.html">src/impl/cmake_init_lib.cc</a> is the implementation.</p>
 <p >All private headers and implementations are requried for <a class="el" href="cmake__init__lib_8h.html">include/cmake-init/cmake_init_lib.h</a> and <a class="el" href="cmake__init__lib_8cc.html">src/impl/cmake_init_lib.cc</a> are arranged in src/inc/cmake_init_lib/ and src/impl/cmake_init_lib/.</p>
 <p ><b>Note</b>: <a class="el" href="cmake__init__lib_8h.html">cmake_init_lib.h</a> is a public header and any header file from src/inc/ must not be included in it.</p>
-<p >The namespace of the project is also structured in the same way. </p>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Thing to note</h2>
+<ul>
+<li>We include both public and private headers must combine to represent the project structure of impl/.</li>
+</ul>
+<div class="fragment"><div class="line">cmake-init</div>
+<div class="line"> ├── src</div>
+<div class="line"> │   ├── configuration</div>
+<div class="line"> │   │   ├── config.h</div>
+<div class="line"> │   │   └── config.h.ini</div>
+<div class="line"> │   ├── inc + include/cmake-init</div>
+<div class="line"> │   │   ├── cmake_init_lib.h</div>
+<div class="line"> │   │   └── cmake_init_lib</div>
+<div class="line"> │   │       └── print_greeting.h</div>
+<div class="line"> │   ├── impl</div>
+<div class="line"> │   │   ├── cmake_init_lib.cc</div>
+<div class="line"> │   │   ├── cmake_init_lib</div>
+<div class="line"> │   │   │   └── print_greeting.h</div>
+<div class="line"> │   │   └── main.cpp</div>
+</div><!-- fragment --><ul>
+<li>Both are public and private header files are included the same way.</li>
+<li>The namespace of the project is also structured in the same way. </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

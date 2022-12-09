@@ -7,12 +7,12 @@ include(cmake/init.cmake)
 #####################################################
 ### Target (building app? a library? both?)
 #####################################################
-add_library(cmake_init_lib)
-set_target_properties(cmake_init_lib PROPERTIES OUTPUT_NAME cmake-init
+add_library(cmake-init_lib)
+set_target_properties(cmake-init_lib PROPERTIES OUTPUT_NAME cmake-init
 )# libcmake-init.a
 
-add_executable(cmake_init_app)
-set_target_properties(cmake_init_app PROPERTIES OUTPUT_NAME cmake-init
+add_executable(cmake-init_app)
+set_target_properties(cmake-init_app PROPERTIES OUTPUT_NAME cmake-init
 )# cmake-init.exe
 
 #####################################################

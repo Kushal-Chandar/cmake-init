@@ -1,6 +1,7 @@
 include_guard()
 
 function(get_latest_annotated_tag)
+  find_package(Git)
   execute_process(
     COMMAND ${GIT_EXECUTABLE} describe --abbrev=0 --match "v*"
     WORKING_DIRECTORY "${PROJEC_SOURCE_DIR}"

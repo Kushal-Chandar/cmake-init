@@ -1,9 +1,9 @@
 var config_8h =
 [
-    [ "git_sha", "config_8h.html#a8be24d0a4ab953028731ab4b6625ee23", null ],
-    [ "project_name", "config_8h.html#a9c936e9ea2fb85cb3398eedb02258063", null ],
-    [ "project_version", "config_8h.html#a16677d30e99d6946d73b146b21318836", null ],
-    [ "project_version_major", "config_8h.html#a73ac50d6f5c0b1b6df640c3439dbdbd8", null ],
-    [ "project_version_minor", "config_8h.html#af15d6a6a69a7bd53eac5f3458141cfdb", null ],
-    [ "project_version_patch", "config_8h.html#a590b5d2d9fbf14f7393f12e0afd594e2", null ]
+    [ "git_sha", "config_8h.html#a80a012b0d583ebf94cd0765ca1e692a9", null ],
+    [ "project_name", "config_8h.html#ace3d7a4527e43506ee69e9d95a08b640", null ],
+    [ "project_version", "config_8h.html#a9790d003aa8b80f25c608fb8d2a92c38", null ],
+    [ "project_version_major", "config_8h.html#a179c08ce3260e5bc2d9cb2f556ab11e6", null ],
+    [ "project_version_minor", "config_8h.html#af4ece3f89cb66e77ab8d52e255744888", null ],
+    [ "project_version_patch", "config_8h.html#aa11b2d96c480699cf4b7ea1bc5d75d2c", null ]
 ];

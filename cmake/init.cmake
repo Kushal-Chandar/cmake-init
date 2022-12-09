@@ -25,6 +25,16 @@ option(SANITIZE_UNDEFINED "Enable sanitizer for undefined behaviour" OFF)
 include(${CMAKE_CURRENT_SOURCE_DIR}/options.cmake)
 
 # ----------------------------------------------------------------------------
+#   Setting output directories for all targets
+# ----------------------------------------------------------------------------
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY
+    ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_BUILD_TYPE}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY
+    ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_BUILD_TYPE}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY
+    ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_BUILD_TYPE}/bin)
+
+# ----------------------------------------------------------------------------
 #   Replace "-" with "_" in project name and get upper and lower case name
 # ----------------------------------------------------------------------------
 string(

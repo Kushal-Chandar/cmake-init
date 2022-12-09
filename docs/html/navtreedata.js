@@ -24,14 +24,16 @@
 */
 var NAVTREE =
 [
-  [ "cmake_init", "index.html", [
+  [ "cmake-init", "index.html", [
     [ "What should be put in each directory in src?", "md_src__r_e_a_d_m_e.html", [
       [ "configuration", "md_src__r_e_a_d_m_e.html#autotoc_md1", null ],
       [ "impl", "md_src__r_e_a_d_m_e.html#autotoc_md2", null ],
       [ "inc", "md_src__r_e_a_d_m_e.html#autotoc_md3", null ],
-      [ "Convention I have followed for this project", "md_src__r_e_a_d_m_e.html#autotoc_md4", null ]
+      [ "Convention I have followed for this project", "md_src__r_e_a_d_m_e.html#autotoc_md4", [
+        [ "Thing to note", "md_src__r_e_a_d_m_e.html#autotoc_md5", null ]
+      ] ]
     ] ],
-    [ "What should be put in ${PROJECT_NAME} directory in include?", "md_include_cmake_init__r_e_a_d_m_e.html", null ],
+    [ "What should be put in ${PROJECT_NAME} directory in include?", "md_include__r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [

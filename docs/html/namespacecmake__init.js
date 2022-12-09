@@ -1,13 +1,13 @@
 var namespacecmake__init =
 [
     [ "cmake_init_lib", "namespacecmake__init_1_1cmake__init__lib.html", "namespacecmake__init_1_1cmake__init__lib" ],
-    [ "config", "namespacecmake__init_1_1config.html", [
-      [ "git_sha", "namespacecmake__init_1_1config.html#a8be24d0a4ab953028731ab4b6625ee23", null ],
-      [ "project_name", "namespacecmake__init_1_1config.html#a9c936e9ea2fb85cb3398eedb02258063", null ],
-      [ "project_version", "namespacecmake__init_1_1config.html#a16677d30e99d6946d73b146b21318836", null ],
-      [ "project_version_major", "namespacecmake__init_1_1config.html#a73ac50d6f5c0b1b6df640c3439dbdbd8", null ],
-      [ "project_version_minor", "namespacecmake__init_1_1config.html#af15d6a6a69a7bd53eac5f3458141cfdb", null ],
-      [ "project_version_patch", "namespacecmake__init_1_1config.html#a590b5d2d9fbf14f7393f12e0afd594e2", null ]
+    [ "configuration", "namespacecmake__init_1_1configuration.html", [
+      [ "git_sha", "namespacecmake__init_1_1configuration.html#a80a012b0d583ebf94cd0765ca1e692a9", null ],
+      [ "project_name", "namespacecmake__init_1_1configuration.html#ace3d7a4527e43506ee69e9d95a08b640", null ],
+      [ "project_version", "namespacecmake__init_1_1configuration.html#a9790d003aa8b80f25c608fb8d2a92c38", null ],
+      [ "project_version_major", "namespacecmake__init_1_1configuration.html#a179c08ce3260e5bc2d9cb2f556ab11e6", null ],
+      [ "project_version_minor", "namespacecmake__init_1_1configuration.html#af4ece3f89cb66e77ab8d52e255744888", null ],
+      [ "project_version_patch", "namespacecmake__init_1_1configuration.html#aa11b2d96c480699cf4b7ea1bc5d75d2c", null ]
     ] ],
     [ "CmakeInit", "classcmake__init_1_1_cmake_init.html", "classcmake__init_1_1_cmake_init" ],
     [ "sum_of_first_n_naturals", "namespacecmake__init.html#ac39930aa640245afd54cd8637ef99470", null ]
