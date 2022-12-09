@@ -41,7 +41,7 @@ cmake-init
  │   │   ├── cmake_init_lib
  │   │   │   └── print_greeting.h
  │   │   ├── cmake_init_lib.cc
- │   │   └── main.cpp
+ │   │   └── main.cc
 ```
 
 include/cmake-init/cmake_init_lib.h provides the interface and src/impl/cmake_init_lib.cc is the implementation.
@@ -69,7 +69,7 @@ cmake-init
  │   │   ├── cmake_init_lib.cc
  │   │   ├── cmake_init_lib
  │   │   │   └── print_greeting.h
- │   │   └── main.cpp
+ │   │   └── main.cc
 ```
 
 - Both are public and private header files are included the same way.

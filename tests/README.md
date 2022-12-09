@@ -20,10 +20,10 @@ cmake-init
  │       ├── cmake_init_lib
  │       │   └── print_greeting.h
  │       ├── cmake_init_lib.cc
- │       └── main.cpp
+ │       └── main.cc
  ├── tests
  │   ├── cmake_init_lib
  │   │   └── print_greeting_test.h
  │   ├── cmake_init_lib_test.cc
- │   └── main_test.cpp
+ │   └── main_test.cc
 ```
