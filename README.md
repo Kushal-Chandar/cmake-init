@@ -11,14 +11,15 @@ dependency management -> msys2 and vcpkg
 - Custom project variables
 
 ```cmake
-# ---------------------------------------------------------------
+# ----------------------------------------------------------------------------
+#   Setting custom variables
 # if your project name is cmake-init
 # CMAKE_INIT_PUBLIC_HEADER_DIR variable -> public headers (include)
 # CMAKE_INIT_PRIVATE_HEADER_DIR variable -> private headers (src/inc)
 # CMAKE_INIT_SOURCE_DIR variable -> source files (src)
 # CMAKE_INIT_IMPL_DIR variable -> implementation (src/impl)
 # CMAKE_INIT_TEST_DIR variable -> implementation (test)
-# ---------------------------------------------------------------
+# ----------------------------------------------------------------------------
 ```
 
 ## Usage
