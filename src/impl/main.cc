@@ -1,6 +1,5 @@
-#include ""
-
-#include "conf"
+#include "cmake-init/cmake_init_lib.h"
+#include "configuration/config.h"
 #include "fmt/color.h"
 
 auto main() -> int {

@@ -6,5 +6,5 @@ if you have internal header files put them in src/inc.
 
 In case of header only libraries the entire code is going to be in this folder.
 
-The users of library will access files in the following fashion <${PROJECT_NAME}/header1.h>
-In this case, <cmake-init/cmake_init_lib.h>
+The users of library will access files in the following fashion &lt;${PROJECT_NAME}/header1.h&gt;
+In this case, &lt;cmake-init/cmake_init_lib.h&gt;
