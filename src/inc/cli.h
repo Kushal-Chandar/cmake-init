@@ -7,7 +7,8 @@ namespace cmake_init {
 
 class CLI {
  public:
-  auto parse(int argc, char const *argv[]) noexcept -> std::optional<int>;
+  static auto Parse(int argc, char const *argv[]) noexcept
+      -> std::optional<int>;
 };
 
 }  // namespace cmake_init

@@ -9,7 +9,7 @@
 
 namespace cmake_init {
 
-auto CLI::parse(int argc, char const **argv) noexcept -> std::optional<int> {
+auto CLI::Parse(int argc, char const **argv) noexcept -> std::optional<int> {
   ::CLI::App cmake_init_cli{
       "cmake-init.exe is an executable generated with cmake-init project "
       "template."};
@@ -26,9 +26,9 @@ auto CLI::parse(int argc, char const **argv) noexcept -> std::optional<int> {
 
   // Implement funtionality based on flags and options
   if (version) {
-    fmt::print("{}\n{}\n{}\n", cmake_init::config::git_sha,
-               cmake_init::config::project_name,
-               cmake_init::config::project_version);
+    fmt::print(
+        "{} version {}\n\ncommit: {}\n", cmake_init::config::project_name,
+        cmake_init::config::project_version, cmake_init::config::git_sha);
     return EXIT_SUCCESS;
   }
 

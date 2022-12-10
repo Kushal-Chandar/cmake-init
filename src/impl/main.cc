@@ -4,8 +4,7 @@
 #include "cmake_init_lib.h"
 
 auto main(int argc, char const *argv[]) -> int {
-  cmake_init::CLI cli;
-  auto optional = cli.parse(argc, argv);
+  auto optional = cmake_init::CLI::Parse(argc, argv);
   if (optional.has_value()) {
     return optional.value();
   }
