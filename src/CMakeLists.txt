@@ -2,6 +2,7 @@
 ### Required packages
 ###########################################
 find_package(fmt CONFIG REQUIRED)
+find_package(CLI11 CONFIG REQUIRED)
 
 ###########################################
 ### cmake-init library
@@ -28,8 +29,12 @@ target_include_directories(cmake-init_lib
 ###########################################
 ### cmake-init
 ###########################################
-target_sources(cmake-init_app PRIVATE ${CMAKE_INIT_IMPL_DIR}/main.cc)
+target_sources(
+  cmake-init_app
+  PRIVATE ${CMAKE_INIT_IMPL_DIR}/main.cc ${CMAKE_INIT_IMPL_DIR}/cli.cc
+          ${CMAKE_INIT_PRIVATE_HEADER_DIR}/cli.h)
 target_link_libraries(cmake-init_app PRIVATE fmt::fmt)
+target_link_libraries(cmake-init_app PRIVATE CLI11::CLI11)
 target_link_libraries(cmake-init_app PRIVATE configuration_header
 )# Enable configuration header option should be set to on
 target_link_libraries(cmake-init_app PRIVATE project_compile_options)

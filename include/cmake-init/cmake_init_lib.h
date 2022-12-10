@@ -5,12 +5,12 @@
 
 namespace cmake_init {
 
-auto sum_of_first_n_naturals(int num) -> int;
+auto sum_of_first_n_naturals(int num) noexcept -> int;
 
 class CmakeInit {
  public:
-  auto Greet() -> void;
-  explicit CmakeInit(std::string_view);
+  auto Greet() noexcept -> void;
+  explicit CmakeInit(std::string_view) noexcept;
 
  private:
   std::string_view message_;
