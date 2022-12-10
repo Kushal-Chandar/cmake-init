@@ -35,11 +35,13 @@ cmake-init
  │   │   ├── config.h
  │   │   └── config.h.ini
  │   ├── inc
+ │   │   ├── cli.h
  │   │   └── cmake_init_lib
  │   │       └── print_greeting.h
  │   ├── impl
  │   │   ├── cmake_init_lib
  │   │   │   └── print_greeting.h
+ │   │   ├── cli.cc
  │   │   ├── cmake_init_lib.cc
  │   │   └── main.cc
 ```
@@ -63,10 +65,12 @@ cmake-init
  │   │   └── config.h.ini
  │   ├── inc + include/cmake-init
  │   │   ├── cmake_init_lib.h
+ │   │   ├── cli.h
  │   │   └── cmake_init_lib
  │   │       └── print_greeting.h
  │   ├── impl
  │   │   ├── cmake_init_lib.cc
+ │   │   ├── cli.cc
  │   │   ├── cmake_init_lib
  │   │   │   └── print_greeting.h
  │   │   └── main.cc

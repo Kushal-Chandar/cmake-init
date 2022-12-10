@@ -1,7 +1,8 @@
 {
   "name": "cmake-init",
   "dependencies": [
-    "fmt"
+    "fmt",
+    "cli11"
   ],
   "features": {
     "tests": {

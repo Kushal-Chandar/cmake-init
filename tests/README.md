@@ -10,20 +10,23 @@ cmake-init
  │   └── cmake-init
  │       └── cmake_init_lib.h
  ├── src
- │   ├── configuration
+ │   ├── config
  │   │   ├── config.h
  │   │   └── config.h.ini
  │   ├── inc
+ │   │   ├── cli.h
  │   │   └── cmake_init_lib
  │   │       └── print_greeting.h
  │   └── impl
+ │       ├── cmake_init_lib.cc
+ │       ├── cli.cc
  │       ├── cmake_init_lib
  │       │   └── print_greeting.h
- │       ├── cmake_init_lib.cc
  │       └── main.cc
  ├── tests
+ │   ├── cmake_init_lib_test.cc
+ │   ├── cli_test.cc
  │   ├── cmake_init_lib
  │   │   └── print_greeting_test.h
- │   ├── cmake_init_lib_test.cc
  │   └── main_test.cc
 ```
