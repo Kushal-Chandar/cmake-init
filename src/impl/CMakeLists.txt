@@ -5,8 +5,8 @@
 # add source files available in this directory to any target your want
 
 target_sources(cmake-init_lib PRIVATE cmake_init_lib.cc)
-
-target_sources(cmake-init_app PRIVATE cli.cc main.cc)
+target_sources(cmake-init_cli PRIVATE cli.cc)
+target_sources(cmake-init_app PRIVATE main.cc)
 
 #####################################################
 ### Source files in other subdirectories
