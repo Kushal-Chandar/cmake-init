@@ -2,13 +2,13 @@
 
 a cmake project with ci, code coverage, clang tidy, cpp check, graphviz, iwyu, gtest, etc.
 
-dependency management -> msys2 and vcpkg
+dependency management -> vcpkg
 
 ## Features
 
 - Automatic versioning with git annotated tags,
   _please follow [semantic versioning](https://semver.org/) for accurate and predictable results._
-- Custom project variables
+- Custom project variables.
 
 ```cmake
 # -----------------------------------------------------------------------------------
@@ -21,6 +21,45 @@ dependency management -> msys2 and vcpkg
 # CMAKE_INIT_TEST_DIR variable -> implementation (test)
 # -----------------------------------------------------------------------------------
 ```
+
+- Easy to use project structure.
+
+```bash
+cmake-init
+ ├── include
+ │   └── cmake-init
+ │       └── cmake_init_lib.h
+ ├── src
+ │   ├── config
+ │   │   ├── config.h
+ │   │   └── config.h.ini
+ │   ├── inc
+ │   │   ├── cmake_init_lib
+ │   │   │   ├── print_greeting.h
+ │   │   │   └── CMakeLists.txt
+ │   │   ├── cli.h
+ │   │   └── CMakeLists.txt
+ │   └── impl
+ │       ├── cmake_init_lib
+ │       │   ├── print_greeting.h
+ │       │   └── CMakeLists.txt
+ │       ├── cmake_init_lib.cc
+ │       ├── cli.cc
+ │       ├── main.cc
+ │       └── CMakeLists.txt
+ ├── tests
+ │   ├── cmake_init_lib
+ │   │   ├── print_greeting_test.h
+ │   │   └── CMakeLists.txt
+ │   ├── cmake_init_lib_test.cc
+ │   ├── cli_test.cc
+ │   ├── main_test.cc
+ │   └── CMakeLists.txt
+ └── CMakeLists.txt
+```
+
+- CMakeLists.txt file in every directory lets you sources easily to your target without any prefixing
+(Please read the comments in CMakeLists.txt files for a better understanding).
 
 ## Usage
 
