@@ -1,4 +1,4 @@
-#include "cmake_init_lib.h"
+#include "cmake_init.h"
 
 #include <gtest/gtest.h>
 

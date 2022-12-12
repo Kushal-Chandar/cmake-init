@@ -1,10 +1,10 @@
 #####################################################
-### Source files in IMPL/cmake_init_lib
+### Source files in INC/cmake_init
 #####################################################
 
 # add source files available in this directory to any target your want
 
-target_sources(cmake-init_lib PRIVATE print_greeting.cc)
+target_sources(lib PRIVATE print_greeting.h)
 
 #####################################################
 ### Source files in other subdirectories

@@ -1,12 +1,12 @@
 #####################################################
-### Source files in tests/cmake_init_lib
+### Source files in IMPL/cmake_init
 #####################################################
 
 # add source files available in this directory to any target your want
 
-target_sources(cmake-init_tests PRIVATE print_greeting_test.cc)
+target_sources(lib PRIVATE print_greeting.cc)
 
 #####################################################
 ### Source files in other subdirectories
 #####################################################
-# none left
+# none left but you get the point

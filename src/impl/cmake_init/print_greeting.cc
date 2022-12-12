@@ -1,9 +1,9 @@
-#include "cmake_init_lib/print_greeting.h"
+#include "cmake_init/print_greeting.h"
 
 #include <fmt/color.h>
 #include <fmt/core.h>
 
-namespace cmake_init::cmake_init_lib {
+namespace cmake_init::cmake_init {
 PrintGreeting::PrintGreeting(std::string_view message) : message_(message) {}
 
 auto PrintGreeting::Print() -> bool {
@@ -18,4 +18,4 @@ auto PrintGreeting::Print() -> bool {
              "Nested namespaces are extended as per requirement.\n");
   return true;
 }
-}  // namespace cmake_init::cmake_init_lib
+}  // namespace cmake_init::cmake_init

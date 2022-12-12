@@ -28,30 +28,30 @@ dependency management -> vcpkg
 cmake-init
  ├── include
  │   └── cmake-init
- │       └── cmake_init_lib.h
+ │       └── cmake_init.h
  ├── src
  │   ├── config
  │   │   ├── config.h
  │   │   └── config.h.ini
  │   ├── inc
- │   │   ├── cmake_init_lib
+ │   │   ├── cmake_init
  │   │   │   ├── print_greeting.h
  │   │   │   └── CMakeLists.txt
  │   │   ├── cli.h
  │   │   └── CMakeLists.txt
  │   └── impl
- │       ├── cmake_init_lib
+ │       ├── cmake_init
  │       │   ├── print_greeting.h
  │       │   └── CMakeLists.txt
- │       ├── cmake_init_lib.cc
+ │       ├── cmake_init.cc
  │       ├── cli.cc
  │       ├── main.cc
  │       └── CMakeLists.txt
  ├── tests
- │   ├── cmake_init_lib
+ │   ├── cmake_init
  │   │   ├── print_greeting_test.h
  │   │   └── CMakeLists.txt
- │   ├── cmake_init_lib_test.cc
+ │   ├── cmake_init_test.cc
  │   ├── cli_test.cc
  │   ├── main_test.cc
  │   └── CMakeLists.txt

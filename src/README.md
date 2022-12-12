@@ -29,29 +29,29 @@ include/project and src/inc directories should try to mimic this structure.
 cmake-init
  ├── include
  │   └── cmake-init
- │       └── cmake_init_lib.h
+ │       └── cmake_init.h
  ├── src
  │   ├── configuration
  │   │   ├── config.h
  │   │   └── config.h.ini
  │   ├── inc
  │   │   ├── cli.h
- │   │   └── cmake_init_lib
+ │   │   └── cmake_init
  │   │       └── print_greeting.h
  │   ├── impl
- │   │   ├── cmake_init_lib
+ │   │   ├── cmake_init
  │   │   │   └── print_greeting.h
  │   │   ├── cli.cc
- │   │   ├── cmake_init_lib.cc
+ │   │   ├── cmake_init.cc
  │   │   └── main.cc
 ```
 
-include/cmake-init/cmake_init_lib.h provides the interface and src/impl/cmake_init_lib.cc is the implementation.
+include/cmake-init/cmake_init.h provides the interface and src/impl/cmake_init.cc is the implementation.
 
-All private headers and implementations are requried for include/cmake-init/cmake_init_lib.h and src/impl/cmake_init_lib.cc
-are arranged in src/inc/cmake_init_lib/ and src/impl/cmake_init_lib/.
+All private headers and implementations are requried for include/cmake-init/cmake_init.h and src/impl/cmake_init.cc
+are arranged in src/inc/cmake_init/ and src/impl/cmake_init/.
 
-**Note**: cmake_init_lib.h is a public header and any header file from src/inc/ must not be included in it.
+**Note**: cmake_init.h is a public header and any header file from src/inc/ must not be included in it.
 
 ### Things to note
 
@@ -64,14 +64,14 @@ cmake-init
  │   │   ├── config.h
  │   │   └── config.h.ini
  │   ├── inc + include/cmake-init
- │   │   ├── cmake_init_lib.h
+ │   │   ├── cmake_init.h
  │   │   ├── cli.h
- │   │   └── cmake_init_lib
+ │   │   └── cmake_init
  │   │       └── print_greeting.h
  │   ├── impl
- │   │   ├── cmake_init_lib.cc
+ │   │   ├── cmake_init.cc
  │   │   ├── cli.cc
- │   │   ├── cmake_init_lib
+ │   │   ├── cmake_init
  │   │   │   └── print_greeting.h
  │   │   └── main.cc
 ```
