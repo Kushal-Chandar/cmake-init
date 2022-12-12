@@ -1,3 +1,8 @@
+# This is the test dir CMakeLists.txt, what should you do in here?
+# add test targets
+# add link libraries and include directories for all your targets
+# add sources from current dir (not subdirs)
+
 ###########################################
 ### Required packages
 ###########################################
