@@ -11,26 +11,24 @@ find_package(GTest CONFIG REQUIRED)
 ###########################################
 ### cmake-init tests
 ###########################################
-add_executable(cmake-init_tests)
+add_executable(tests)
 set_target_properties(
-  cmake-init_tests
+  tests
   PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
              LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
              RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 # CMAKE_CURRENT_BINARY_DIR for tests is build/tests/
 
-target_link_libraries(cmake-init_tests PRIVATE GTest::gtest_main)
-target_link_libraries(cmake-init_tests PRIVATE coverage_options)
-target_link_libraries(cmake-init_tests PRIVATE lib)
-target_link_libraries(cmake-init_tests PRIVATE cli)
-target_include_directories(cmake-init_tests
-                           PRIVATE ${CMAKE_INIT_PRIVATE_HEADER_DIR})
+target_link_libraries(tests PRIVATE GTest::gtest_main)
+target_link_libraries(tests PRIVATE coverage_options)
+target_link_libraries(tests PRIVATE lib)
+target_link_libraries(tests PRIVATE cli)
+target_include_directories(tests PRIVATE ${CMAKE_INIT_PRIVATE_HEADER_DIR})
 
 ###########################################
 ### sources from current dir
 ###########################################s
-target_sources(cmake-init_tests PRIVATE main_test.cc cli_test.cc
-                                        cmake_init_test.cc)
+target_sources(tests PRIVATE main_test.cc cli_test.cc cmake_init_test.cc)
 
 ###########################################
 ### sources from subdirs
@@ -38,4 +36,4 @@ target_sources(cmake-init_tests PRIVATE main_test.cc cli_test.cc
 add_subdirectory(cmake_init)
 
 include(GoogleTest)
-gtest_discover_tests(cmake-init_tests)
+gtest_discover_tests(tests)
