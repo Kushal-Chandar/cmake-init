@@ -1,5 +1,8 @@
 # cmake-init
 
+[![c++](https://img.shields.io/badge/C++-00599C?logo=c%2B%2B)](https://en.cppreference.com/w/)
+[![cmake](https://img.shields.io/badge/CMake-1b8b40.svg?logo=cmake&logoColor=white)](https://cmake.org/)
+
 a cmake project with ci, code coverage, clang tidy, cpp check, graphviz, iwyu, gtest, etc.
 
 dependency management -> vcpkg
