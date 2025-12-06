@@ -11,14 +11,14 @@ if(NOT NPROC)
   endif()
 endif()
 
-find_package(PythonInterp)
-if(PYTHON_EXECUTABLE)
+find_package(Python REQUIRED COMPONENTS Interpreter)
+if(Python_EXECUTABLE)
   find_program(RUN-CLANG-TIDY NAMES run-clang-tidy)
   if(RUN-CLANG-TIDY)
     message(STATUS "clang-tidy was found.")
     add_custom_target(
       clang-tidy
-      COMMAND ${PYTHON_EXECUTABLE} ${RUN-CLANG-TIDY}
+      COMMAND ${Python_EXECUTABLE} ${RUN-CLANG-TIDY}
               -p=${CMAKE_CURRENT_BINARY_DIR} -j ${NPROC} -quiet
       COMMENT "Running clang tidy"
       VERBATIM)
@@ -48,7 +48,7 @@ if(PYTHON_EXECUTABLE)
         ${CMAKE_CURRENT_SOURCE_DIR}/include --xml 2>
         ${CPPCHECK_BUILD_DIR}/cpp-check-report.xml
       COMMAND
-        ${PYTHON_EXECUTABLE} ${CPPCHECK_HTMLREPORT}
+        ${Python_EXECUTABLE} ${CPPCHECK_HTMLREPORT}
         --file=${CPPCHECK_BUILD_DIR}/cpp-check-report.xml
         --title=${PROJECT_NAME} --report-dir=${CPPCHECK_BUILD_DIR}/html
         --source-dir=${CMAKE_CURRENT_SOURCE_DIR}
@@ -63,7 +63,7 @@ if(PYTHON_EXECUTABLE)
     message(STATUS "include-what-you-use was found.")
     add_custom_target(
       iwyu
-      COMMAND ${PYTHON_EXECUTABLE} ${IWYU_TOOL} -p ${CMAKE_CURRENT_BINARY_DIR}
+      COMMAND ${Python_EXECUTABLE} ${IWYU_TOOL} -p ${CMAKE_CURRENT_BINARY_DIR}
               -j ${NPROC}
       COMMENT "Running include-what-you-use"
       VERBATIM)
